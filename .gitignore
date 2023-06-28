@@ -9,6 +9,10 @@ __pycache__/
 *.csv
 *.TXT
 *.txt
+*.zip
+*.ZIP
+*.db
+*.DB
 
 # Distribution / packaging
 .Python
