@@ -14,7 +14,7 @@ Base_Valor = pd.read_csv(r'./Dados/Dados_Mes_Valor.csv')
 Base_Valor.columns = ['Mes', 'Quantidade']
 
 cores = '#5BC0CA'
-cor_text = 'gray'
+cor_text = 'silver'
 
 
 #Instanciando o app
