@@ -1,7 +1,5 @@
 import dash #→ pacote que sustenta a solução
-#import dash_core_components as dcc 
 from dash import dcc
-#import dash_html_components as html
 from dash import html
 import dash_bootstrap_components as dbc
 
@@ -15,6 +13,8 @@ Base_Dados = pd.read_csv(r'./Dados/Dados_Diários.csv')
 Base_Valor = pd.read_csv(r'./Dados/Dados_Mes_Valor.csv')
 Base_Valor.columns = ['Mes', 'Quantidade']
 
+cores = '#5BC0CA'
+cor_text = 'gray'
 
 
 #Instanciando o app
@@ -57,14 +57,14 @@ app.layout = html.Div(
                         html.H5(
                             ['Dashboard - Multas'], 
                             style={
-                                'color': 'gray',
+                                'color': cor_text,
                                 'font-family':'open sans semi bold,sans-serif', 
                                 'font-weight': '500'
                             } 
                         ),
                         html.H6(['Análise de multas PRF 2022'], 
                             style={
-                                'color': 'gray',
+                                'color': cor_text,
                                 'font-family':'open sans semi bold,sans-serif', 
                                 'font-weight': '300'
                             } ),
@@ -121,7 +121,7 @@ app.layout = html.Div(
                                         html.H5(
                                             ['Total multas'],
                                             style={
-                                                'color':'gray',
+                                                'color':cor_text,
                                                 'line-height': '1.6',
                                                 'box-sizing': 'border-box',
                                                 'margin': '1rem',
@@ -134,7 +134,7 @@ app.layout = html.Div(
                                                 'font-size': '1.5em',
                                                 'line-height': '1.6',
                                                 'font-weight': '400',
-                                                'color': 'orange',
+                                                'color': cores,
                                                 'border-radius': '3px',
                                                 'padding': '12px 8px 12px 14px',
                                                 'border': '1px solid #D3D3D3',
@@ -153,7 +153,7 @@ app.layout = html.Div(
                                             html.H5(
                                                 ['Total valores.'],
                                                 style={
-                                                'color': 'gray',
+                                                'color': cor_text,
                                                 'line-height': '1.6',
                                                 'box-sizing': 'border-box',
                                                 'margin': '1rem',
@@ -167,7 +167,7 @@ app.layout = html.Div(
                                                 'font-size': '1.5em',
                                                 'line-height': '1.6',
                                                 'font-weight': '400',
-                                                'color': 'orange',
+                                                'color': cores,
                                                 'border-radius': '3px',
                                                 'padding': '12px 8px 12px 14px',
                                                 'border': '1px solid #D3D3D3',
@@ -221,14 +221,14 @@ app.layout = html.Div(
                                                         x=Base_Dados.Data,
                                                         mode='lines',
                                                         name='Grafico-1',
-                                                        line=dict(color='orange', width=3)
+                                                        line=dict(color=cores, width=3)
                                                     )],
                                                 layout=go.Layout(
                                                     title='Multas diárias',
                                                     template='plotly_dark',
                                                     plot_bgcolor='#161a28',
                                                     paper_bgcolor='#161a28',
-                                                    font={'color': 'gray'},
+                                                    font={'color': cor_text},
                                                     xaxis={'showgrid': False},
                                                     yaxis={'showgrid': False},
                                                     height=350, 
@@ -261,7 +261,7 @@ app.layout = html.Div(
                                                     y=Base_Valor['Quantidade'], 
                                                     x=['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'], 
                                                     #marker=dict(color='#3a8c5d'),
-                                                    marker=dict(color='orange'),                                                    #text=Base_Valor['Quantidade'] / 100000,
+                                                    marker=dict(color=cores),                                                    #text=Base_Valor['Quantidade'] / 100000,
                                                     textposition='outside',
                                                     #hovertemplate='%{text:,.2f}',
                                                     )],
@@ -270,7 +270,7 @@ app.layout = html.Div(
                                                     template='plotly_dark',
                                                     plot_bgcolor='#161a28',
                                                     paper_bgcolor='#161a28',
-                                                    font={'color': 'gray'},
+                                                    font={'color': cor_text},
                                                     xaxis={'showgrid': False},
                                                     yaxis={'showgrid': False},
                                                     height=300, 
