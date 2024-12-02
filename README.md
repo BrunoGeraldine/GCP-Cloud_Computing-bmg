@@ -23,6 +23,9 @@ fonte de dados: [link - PRF](https://www.gov.br/prf/pt-br/acesso-a-informacao/da
   <img width="100" height="30" src="https://github.com/BrunoGeraldine/PRF_Multas_2022_bmg/assets/87772120/17519269-3d0b-4381-9c2e-97c4f45dc8c2"
        </p>
 
+ <p align="left">
+  <img width="100" height="30" src="https://github.com/user-attachments/assets/09059767-b6f7-4366-bd04-771889289493"
+       </p>
 
 
 [Dash Bootstrap Componenst - AI](https://dash-bootstrap-components.opensource.faculty.ai/)
